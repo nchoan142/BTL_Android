@@ -33,10 +33,6 @@ import java.util.ArrayList;
  */
 public class TransactionFragment extends Fragment {
 
-//    private EditText etAmount, etNote;
-//    private Spinner spCategory;
-//    private DatePicker dpDate;
-//    private Button btnAddTransaction;
     private String username;
     private int userId;
     private long newRowId = -1;
@@ -46,9 +42,6 @@ public class TransactionFragment extends Fragment {
     private DatePicker dpTradingDate;
     private Button btnAddTransaction, btnBackToHome;
     private String tradingType;
-    private int totalBudget = 0, totalIncome = 0, totalExpense = 0;
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -141,30 +134,6 @@ public class TransactionFragment extends Fragment {
         }
         return username;
     }
-
-//    private int getTotalBudget() {
-//        Bundle args = getArguments();
-//        if (args != null) {
-//            totalBudget = args.getInt("TOTAL_BUDGET");
-//        }
-//        return totalBudget;
-//    }
-//
-//    private int getTotalIncome() {
-//        Bundle args = getArguments();
-//        if (args != null) {
-//            totalIncome = args.getInt("TOTAL_INCOME");
-//        }
-//        return totalIncome;
-//    }
-//
-//    private int getTotalExpense() {
-//        Bundle args = getArguments();
-//        if (args != null) {
-//            totalExpense = args.getInt("TOTAL_EXPENSE");
-//        }
-//        return totalExpense;
-//    }
 
     private int getUserId() {
         DBManager dbManager = new DBManager(requireContext());

@@ -103,9 +103,6 @@ public class DBManager {
                 new String[]{username}
         );
 
-//        if (cursor != null && cursor.moveToFirst()) {
-//        if (cursor.moveToNext()) {
-
         while (cursor.moveToNext()) {
             userId = cursor.getInt(cursor.getColumnIndexOrThrow(DBContract.UserEntry.COLUMN_ID));
         }

@@ -97,14 +97,6 @@ public class BudgetFragment extends Fragment {
         });
     }
 
-//    public int caculateBudget() {
-//        int budget = 0;
-//        for(int i = 0; i < listBudgets.size(); i++) {
-//            budget += listBudgets.get(i).getBudgetAmount();
-//        }
-//        return budget;
-//    }
-
     private void insertBudget(BudgetModel budgetModel) {
         DBManager dbManager = new DBManager(requireContext());
         newRowId = dbManager.insertBudget(budgetModel);

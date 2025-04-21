@@ -106,7 +106,6 @@ public class CategoryFragment extends Fragment {
         listCategories = DBManager.getAllCategory();
     }
 
-
     private void insertCategory(CategoryModel newCategory) {
         // requireContext(): lấy context của Activity chứa Fragment
         DBManager DBManager = new DBManager(requireContext());

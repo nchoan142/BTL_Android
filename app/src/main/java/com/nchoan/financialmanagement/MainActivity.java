@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Username MainActivity", "Username: " + username);
         mapIdToView();
         setupViews();
-
     }
 
     private String getUsernameFromLoginActivity() {

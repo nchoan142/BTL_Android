@@ -64,13 +64,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public DBHelper(Context context) {
         super(context, DB_NAME, null, DATABASE_VERSION);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_USER);
         db.execSQL(SQL_CREATE_CATEGORY);
         db.execSQL(SQL_CREATE_BUDGET);
         db.execSQL(SQL_CREATE_TRANSACTIONS);
-
     }
 
     @Override

@@ -31,10 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-
         mapIdToView();
         getAllUser();
-//        printUserList();
         setupViews();
     }
 
@@ -122,22 +120,9 @@ public class LoginActivity extends AppCompatActivity {
         Log.d("listUser", "Số lượng phần tử: " + listUser.size());
     }
 
-//    private void getUserByUsername(String username) {
-//        DBManager dbManager = new DBManager(this);
-//        UserModel user = dbManager.getUserByUsername(username);
-//    }
-
-//    private void printUserList() {
-//        for (UserModel user : listUser) {
-//            Log.d("UserList", "Username: " + user.getUserName() + ", Password: " + user.getUserPassword());
-//            Log.d("UserAmount", "User Amount: " + listUser.size());
-//        }
-//    }
-
     @Override
     protected void onResume() {
         super.onResume();
         getAllUser();
-//        printUserList();
     }
 }

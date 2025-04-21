@@ -21,7 +21,6 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         this.listTransactions = listTransactions;
     }
 
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,7 +44,6 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
         DecimalFormat formatter = new DecimalFormat("#,###");
         String formattedAmount = formatter.format(item.getAmount());
-
 
         tvAmount.setText(formattedAmount);
         tvType.setText(item.getType());

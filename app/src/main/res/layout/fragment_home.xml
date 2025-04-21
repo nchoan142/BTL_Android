@@ -34,22 +34,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Thu nhập: +15.000.000đ"
         android:textColor="#4CAF50"
         app:layout_constraintEnd_toStartOf="@+id/tv_expense"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_balance"
+        tools:text="Thu nhập: +15.000.000đ" />
 
     <TextView
         android:id="@+id/tv_expense"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Chi tiêu: -5.000.000đ"
         android:textColor="@color/red_F44336"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_income"
-        app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_balance"
+        tools:text="Chi tiêu: -5.000.000đ" />
 
     <Button
         android:id="@+id/btn_add_transaction"

@@ -51,8 +51,6 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     private boolean checkRegister() {

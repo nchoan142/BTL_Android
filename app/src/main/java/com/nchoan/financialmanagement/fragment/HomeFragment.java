@@ -80,12 +80,10 @@ public class HomeFragment extends Fragment {
         totalIncome = 0;
         totalExpense = 0;
 
-
         showAllTransaction();
         caculateTotalIncome();
         caculateTotalExpense();
         caculateTotalBudget();
-
 
         DecimalFormat formatter = new DecimalFormat("#,###");
         String formattedTotalIncome = formatter.format(totalIncome);
@@ -95,7 +93,6 @@ public class HomeFragment extends Fragment {
         tvBalance.setText("Số dư: " + formattedTotalBudget + " VND");
         tvIncome.setText("Thu nhập: +" + formattedTotalIncome + " VND");
         tvExpense.setText("Chi tiêu: -" + formattedTotalExpense + " VND");
-
 
         btnAddTransaction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,9 +108,7 @@ public class HomeFragment extends Fragment {
                 requireActivity().getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fragment_container, transactionFragment)
-//                        .addToBackStack(null) // quay lại fragment trước (HomeFragment)
                         .commit();
-
             }
         });
 
