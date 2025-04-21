@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.HomeFragment">
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dm_10dp"
+        android:text="Số dư: "
+        android:textSize="@dimen/dm_20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/iv_search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dm_10dp"
+        android:background="@drawable/icon_search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_balance"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_income"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Thu nhập: +15.000.000đ"
+        android:textColor="#4CAF50"
+        app:layout_constraintEnd_toStartOf="@+id/tv_expense"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+
+    <TextView
+        android:id="@+id/tv_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Chi tiêu: -5.000.000đ"
+        android:textColor="@color/red_F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_income"
+        app:layout_constraintTop_toBottomOf="@+id/tv_balance" />
+
+    <Button
+        android:id="@+id/btn_add_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm giao dịch"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_income" />
+
+    <TextView
+        android:id="@+id/lb_amount_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số tiền"
+        app:layout_constraintEnd_toStartOf="@+id/lb_type_transaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_transaction" />
+
+    <TextView
+        android:id="@+id/lb_type_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại giao dịch"
+        app:layout_constraintEnd_toStartOf="@+id/lb_note_transaction"
+        app:layout_constraintStart_toEndOf="@+id/lb_amount_transaction"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_transaction" />
+
+    <TextView
+        android:id="@+id/lb_note_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ghi chú"
+        app:layout_constraintEnd_toStartOf="@+id/lb_date_transaction"
+        app:layout_constraintStart_toEndOf="@+id/lb_type_transaction"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_transaction" />
+
+    <TextView
+        android:id="@+id/lb_date_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày giao dịch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lb_note_transaction"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_transaction" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lb_type_transaction"
+        tools:listitem="@layout/transaction_item_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

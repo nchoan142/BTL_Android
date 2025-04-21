@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.SearchFragment">
+
+    <EditText
+        android:id="@+id/edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:hint="Nội dung tìm kiếm"/>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tìm kiếm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search"
+        tools:listitem="@layout/transaction_item_view" />
+
+    <TextView
+        android:id="@+id/lb_amount_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số tiền"
+        app:layout_constraintEnd_toStartOf="@+id/lb_type_transaction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+    <TextView
+        android:id="@+id/lb_type_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loại giao dịch"
+        app:layout_constraintEnd_toStartOf="@+id/lb_note_transaction"
+        app:layout_constraintStart_toEndOf="@+id/lb_amount_transaction"
+        app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+    <TextView
+        android:id="@+id/lb_note_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ghi chú"
+        app:layout_constraintEnd_toStartOf="@+id/lb_date_transaction"
+        app:layout_constraintStart_toEndOf="@+id/lb_type_transaction"
+        app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+    <TextView
+        android:id="@+id/lb_date_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngày giao dịch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lb_note_transaction"
+        app:layout_constraintTop_toBottomOf="@id/btn_search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
