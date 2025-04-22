@@ -1,0 +1,29 @@
+Table User {
+  id INTEGER [pk]
+  username TEXT
+  password TEXT
+  email TEXT
+}
+
+Table Budget {
+  id INTEGER [pk]
+  user_id INTEGER [ref: > User.id]
+  amount INTEGER
+  month TEXT
+}
+
+Table Category {
+  id INTEGER [pk]
+  name TEXT
+  type TEXT
+}
+
+Table Transactions {
+  id INTEGER [pk]
+  user_id INTEGER [ref: > User.id]
+  category_name TEXT
+  amount INTEGER
+  type TEXT
+  note TEXT
+  date TEXT
+}
