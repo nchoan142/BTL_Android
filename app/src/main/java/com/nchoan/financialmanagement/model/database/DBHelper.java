@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.database;
+package com.nchoan.financialmanagement.model.database;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

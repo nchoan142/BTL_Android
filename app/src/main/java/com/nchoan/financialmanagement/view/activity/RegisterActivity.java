@@ -1,8 +1,7 @@
-package com.nchoan.financialmanagement.model;
+package com.nchoan.financialmanagement.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +11,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nchoan.financialmanagement.R;
-import com.nchoan.financialmanagement.database.DBManager;
+import com.nchoan.financialmanagement.model.database.DBManager;
+import com.nchoan.financialmanagement.model.UserModel;
 
 public class RegisterActivity extends AppCompatActivity {
 

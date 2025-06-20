@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.fragment;
+package com.nchoan.financialmanagement.view.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.nchoan.financialmanagement.R;
-import com.nchoan.financialmanagement.model.LoginActivity;
+import com.nchoan.financialmanagement.view.activity.LoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.

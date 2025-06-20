@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.fragment;
+package com.nchoan.financialmanagement.view.fragment;
 
 import android.os.Bundle;
 
@@ -18,11 +18,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.nchoan.financialmanagement.MainActivity;
 import com.nchoan.financialmanagement.R;
-import com.nchoan.financialmanagement.database.DBManager;
-import com.nchoan.financialmanagement.model.BudgetModel;
+import com.nchoan.financialmanagement.model.database.DBManager;
 import com.nchoan.financialmanagement.model.TransactionModel;
+import com.nchoan.financialmanagement.view.activity.MainActivity;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,6 @@
-package com.nchoan.financialmanagement.fragment;
+package com.nchoan.financialmanagement.view.fragment;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,11 +15,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.nchoan.financialmanagement.MainActivity;
 import com.nchoan.financialmanagement.R;
-import com.nchoan.financialmanagement.database.DBManager;
-import com.nchoan.financialmanagement.adapter.BudgetAdapter;
+import com.nchoan.financialmanagement.model.database.DBManager;
+import com.nchoan.financialmanagement.view.adapter.BudgetAdapter;
 import com.nchoan.financialmanagement.model.BudgetModel;
+import com.nchoan.financialmanagement.view.activity.MainActivity;
 
 import java.util.ArrayList;
 

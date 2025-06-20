@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".model.RegisterActivity">
+    tools:context=".view.activity.RegisterActivity">
 
     <TextView
         android:id="@+id/lb_activity_name"

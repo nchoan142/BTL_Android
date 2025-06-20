@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.database;
+package com.nchoan.financialmanagement.model.database;
 
 public class DBContract {
 

@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement;
+package com.nchoan.financialmanagement.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
-import com.nchoan.financialmanagement.fragment.AccountFragment;
-import com.nchoan.financialmanagement.fragment.BudgetFragment;
-import com.nchoan.financialmanagement.fragment.CategoryFragment;
-import com.nchoan.financialmanagement.fragment.HomeFragment;
-import com.nchoan.financialmanagement.fragment.TransactionFragment;
+import com.nchoan.financialmanagement.R;
+import com.nchoan.financialmanagement.view.fragment.AccountFragment;
+import com.nchoan.financialmanagement.view.fragment.BudgetFragment;
+import com.nchoan.financialmanagement.view.fragment.CategoryFragment;
+import com.nchoan.financialmanagement.view.fragment.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
 

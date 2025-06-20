@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.adapter;
+package com.nchoan.financialmanagement.view.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,47 +9,43 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.nchoan.financialmanagement.R;
-import com.nchoan.financialmanagement.model.BudgetModel;
+import com.nchoan.financialmanagement.model.CategoryModel;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class BudgetAdapter extends RecyclerView.Adapter<BudgetAdapter.ViewHolder> {
-    private final ArrayList<BudgetModel> listBudgets;
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHolder> {
+    private final ArrayList<CategoryModel> listCategories;
 
-    public BudgetAdapter(ArrayList<BudgetModel> listBudgets) {
-        this.listBudgets = listBudgets;
+    public CategoryAdapter(ArrayList<CategoryModel> listCategories) {
+        this.listCategories = listCategories;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.budget_item_view, parent, false);
+        View view = layoutInflater.inflate(R.layout.category_item_view, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        BudgetModel item = listBudgets.get(position);
+        CategoryModel item = listCategories.get(position);
         setupViews(holder, item, position);
     }
 
-    private void setupViews(ViewHolder holder, BudgetModel item, int position) {
+    private void setupViews(ViewHolder holder, CategoryModel item, int position) {
         View view = holder.getView();
-        TextView tvBudget = view.findViewById(R.id.tv_budget);
-        TextView tvCreatingDate = view.findViewById(R.id.tv_creating_date);
+        TextView categoryName = view.findViewById(R.id.tv_category_name);
+        TextView categoryType = view.findViewById(R.id.tv_category_type);
 
-        DecimalFormat formatter = new DecimalFormat("#,###");
-        String formattedAmount = formatter.format(item.getBudgetAmount());
-
-        tvBudget.setText(formattedAmount);
-        tvCreatingDate.setText(item.getCreatingDate());
+        categoryName.setText(item.getCategoryName());
+        categoryType.setText(item.getCategoryType());
     }
 
     @Override
     public int getItemCount() {
-        return listBudgets.size();
+        return listCategories.size();
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {

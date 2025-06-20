@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.model;
+package com.nchoan.financialmanagement.view.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,9 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.nchoan.financialmanagement.MainActivity;
+import com.nchoan.financialmanagement.model.UserModel;
 import com.nchoan.financialmanagement.R;
-import com.nchoan.financialmanagement.database.DBManager;
+import com.nchoan.financialmanagement.model.database.DBManager;
 
 import java.util.ArrayList;
 

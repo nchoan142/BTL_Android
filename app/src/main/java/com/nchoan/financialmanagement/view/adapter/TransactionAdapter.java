@@ -1,4 +1,4 @@
-package com.nchoan.financialmanagement.adapter;
+package com.nchoan.financialmanagement.view.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
